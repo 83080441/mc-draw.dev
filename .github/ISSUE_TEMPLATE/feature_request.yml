@@ -1,0 +1,24 @@
+name: Feature request
+description: Suggest an improvement for MC Draw.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / need
+      description: What are you trying to do?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+    validations:
+      required: true
+  - type: checkboxes
+    id: mock
+    attributes:
+      label: References
+      options:
+        - label: I attached a mock / PNG / JSON example

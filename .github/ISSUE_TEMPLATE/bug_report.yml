@@ -1,0 +1,77 @@
+name: Bug report
+description: Something broke — include steps, mode, and exports if you can.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting! Attach **PNG sprites** and/or **JSON model exports** by dragging them into this form (or paste screenshots).
+        From MC Draw: use **Export** → save the PNG / model JSON, then drop the files here.
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Editor mode
+      options:
+        - /3d
+        - /2d
+        - /2-5d
+        - Not sure
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser
+      placeholder: "e.g. Chrome 131 / Firefox 134 / Safari 18"
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Device / OS
+      placeholder: "e.g. Windows 11, macOS, Android"
+    validations:
+      required: false
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Short summary of the bug.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Numbered steps.
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: checkboxes
+    id: attachments
+    attributes:
+      label: Attachments
+      description: Tick what you are attaching (drag files into the issue after submitting if the form blocks uploads — or paste them in a follow-up comment).
+      options:
+        - label: Screenshot / recording
+        - label: Sprite / texture PNG (export from the editor)
+        - label: Model JSON (export from the editor)
+        - label: None (describe only)
+  - type: textarea
+    id: extra
+    attributes:
+      label: Extra context
+      description: Console errors, footer version (vX.Y.Z+commit), anything useful.
+      placeholder: |
+        Version: v0.999.3+…
+        Console: …
